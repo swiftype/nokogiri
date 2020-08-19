@@ -63,7 +63,7 @@ public class NokogiriNonStrictErrorHandler4NekoHtml extends NokogiriErrorHandler
     }
 
     public void error(SAXParseException ex) throws SAXException {
-        errors.add(ex);
+        // no-op, instead of logging the error, to avoid broken docs blowing up the heap
     }
 
     public void fatalError(SAXParseException ex) throws SAXException {
@@ -83,7 +83,7 @@ public class NokogiriNonStrictErrorHandler4NekoHtml extends NokogiriErrorHandler
      * @param e Exception.
      */
     public void error(String domain, String key, XMLParseException e) {
-        errors.add(e);
+        // no-op, instead of logging the error, to avoid broken docs blowing up the heap
     }
 
     /**
@@ -115,7 +115,7 @@ public class NokogiriNonStrictErrorHandler4NekoHtml extends NokogiriErrorHandler
      * @param e Exception.
      */
     public void warning(String domain, String key, XMLParseException e) {
-        errors.add(e);
+        // no-op, instead of logging the error, to avoid broken docs blowing up the heap
     }
 
 }
